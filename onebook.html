@@ -124,8 +124,7 @@
 
           // Check if the book is available or not
           if (book.availability) {
-            window.location.href =`/edit_book.html?book_id=${book_id}`;
-`;
+            window.location.href = `/new_loan.html?book_id=${book_id}`;
           } else {
             alert("Book is unavailable");
           }
@@ -166,4 +165,4 @@
   </script>
 </body>
 
-</html>
+</html>  
