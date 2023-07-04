@@ -123,7 +123,7 @@
 
           // Check if the book is available or not
           if (book.availability) {
-            window.location.href = `/new_loan.html?book_id=${book_id}`;
+            window.location.href = `/front/new_loan.html?book_id=${book_id}`;
           } else {
             alert("Book is unavailable");
           }
@@ -132,7 +132,7 @@
         const deleteButton = document.getElementById('delete-book');
         deleteButton.addEventListener('click', function (event) {
           event.preventDefault();
-          handleButtonClick(axios.delete, '/delete_book/' + book_id, '/books.html');
+          handleButtonClick(axios.delete, '/delete_book/' + book_id, '/front/books.html');
           alert("book deleted")
         });
 
@@ -140,7 +140,7 @@
         const editButton = document.getElementById('edit-book');
         editButton.addEventListener('click', function (event) {
           event.preventDefault();
-          window.location.href = `/edit_book.html?book_id=${book_id}`;
+          window.location.href = `/front/edit_book.html?book_id=${book_id}`;
         });
        // return--------------------------------------------------------
         const returnButton = document.getElementById('return-book');
@@ -149,7 +149,7 @@
 
           // Check if the book is not available or not
           if (!book.availability) {
-            handleButtonClick(axios.put, '/return_book/' + book_id, '/actions.html');
+            handleButtonClick(axios.put, '/return_book/' + book_id, '/front/actions.html');
             alert('book returned successfully')
           } else {
             alert("Book is not loaned");
