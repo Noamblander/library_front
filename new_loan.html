@@ -84,7 +84,7 @@
             axios.post(`${my_server}/create_loan/${book_id}`, loan)
                .then(function (response) {
                         alert('Loan updated successfully');
-                        window.location.href = '/actions.html';
+                        window.location.href = 'actions.html';
                     })
                 .catch(function (error) {
                     console.log(error); // Display error message
