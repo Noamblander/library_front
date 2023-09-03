@@ -61,7 +61,7 @@
                 axios.put(`${my_server}/edit_book/` + book_id, data)
                     .then(function (response) {
                         alert('Book updated successfully');
-                        window.location.href = '/librery.html';
+                        
                     })
                     .catch(function (error) {
                         console.error(error);
